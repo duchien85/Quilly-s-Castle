@@ -1,0 +1,215 @@
+
+uiskin.png
+size: 1024,256
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bar
+  rotate: false
+  xy: 2, 162
+  size: 646, 78
+  orig: 646, 78
+  offset: 0, 0
+  index: -1
+check-off
+  rotate: false
+  xy: 31, 44
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+textfield
+  rotate: false
+  xy: 31, 44
+  size: 14, 14
+  split: 5, 5, 5, 5
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+check-on
+  rotate: false
+  xy: 911, 170
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+cursor
+  rotate: false
+  xy: 940, 203
+  size: 3, 3
+  split: 1, 1, 1, 1
+  orig: 3, 3
+  offset: 0, 0
+  index: -1
+default-pane
+  rotate: false
+  xy: 550, 135
+  size: 5, 3
+  split: 2, 2, 1, 1
+  orig: 5, 3
+  offset: 0, 0
+  index: -1
+default-pane-noborder
+  rotate: false
+  xy: 47, 57
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+default-rect
+  rotate: false
+  xy: 2, 2
+  size: 3, 3
+  split: 1, 1, 1, 1
+  orig: 3, 3
+  offset: 0, 0
+  index: -1
+default-rect-down
+  rotate: false
+  xy: 564, 157
+  size: 3, 3
+  split: 1, 1, 1, 1
+  orig: 3, 3
+  offset: 0, 0
+  index: -1
+default-round
+  rotate: false
+  xy: 2, 7
+  size: 12, 20
+  split: 5, 5, 8, 7
+  orig: 12, 20
+  offset: 0, 0
+  index: -1
+default-round-down
+  rotate: false
+  xy: 550, 140
+  size: 12, 20
+  split: 5, 5, 5, 4
+  orig: 12, 20
+  offset: 0, 0
+  index: -1
+default-scroll
+  rotate: false
+  xy: 516, 106
+  size: 20, 20
+  split: 8, 10, 10, 8
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+default-select
+  rotate: false
+  xy: 911, 186
+  size: 27, 20
+  split: 2, 15, 17, 2
+  orig: 27, 20
+  offset: 0, 0
+  index: -1
+default-select-selection
+  rotate: false
+  xy: 16, 24
+  size: 3, 3
+  split: 0, 2, 2, 0
+  orig: 3, 3
+  offset: 0, 0
+  index: -1
+default-slider
+  rotate: false
+  xy: 945, 210
+  size: 8, 8
+  split: 7, 0, 7, 0
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+default-slider-knob
+  rotate: false
+  xy: 538, 108
+  size: 9, 18
+  orig: 9, 18
+  offset: 0, 0
+  index: -1
+default-window
+  rotate: false
+  xy: 2, 29
+  size: 27, 29
+  split: 12, 12, 17, 9
+  orig: 27, 29
+  offset: 0, 0
+  index: -1
+default-window-title
+  rotate: false
+  xy: 945, 220
+  size: 27, 20
+  split: 12, 12, 9, 8
+  orig: 27, 20
+  offset: 0, 0
+  index: -1
+hp_bar
+  rotate: false
+  xy: 2, 128
+  size: 512, 32
+  orig: 512, 32
+  offset: 0, 0
+  index: -1
+inventory_closed
+  rotate: false
+  xy: 911, 208
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+inventory_open
+  rotate: false
+  xy: 516, 128
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+menu-background
+  rotate: false
+  xy: 650, 46
+  size: 259, 194
+  orig: 259, 194
+  offset: 0, 0
+  index: -1
+mp_bar
+  rotate: false
+  xy: 2, 94
+  size: 512, 32
+  orig: 512, 32
+  offset: 0, 0
+  index: -1
+selection
+  rotate: false
+  xy: 911, 167
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+tree-minus
+  rotate: false
+  xy: 974, 226
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+tree-plus
+  rotate: false
+  xy: 516, 90
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+white
+  rotate: false
+  xy: 31, 39
+  size: 3, 3
+  orig: 3, 3
+  offset: 0, 0
+  index: -1
+xp_bar
+  rotate: false
+  xy: 2, 60
+  size: 512, 32
+  orig: 512, 32
+  offset: 0, 0
+  index: -1

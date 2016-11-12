@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="47">
+ <tileset firstgid="1" name="overworld" tilewidth="16" tileheight="16" tilecount="1024">
+  <image source="textures/overworld.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Background" width="32" height="32">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2TQQrAMAgE9Sl9Sv7/qZ4KRdQmZo0UPMylFGaMCRMRB7jYZgi8fyPuv/m9hqjfatDc7wbZsuOXDZ7bOgukP9KB8o9Ff/X87cf4ZcPqG0D7T9//6Pzo96c1fH3LOn+LLL9smGlC7n/2XDLnj+7olP9p0HZVQbW/aZqmqeUGi/4n7gAQAAA=
+  </data>
+ </layer>
+ <layer name="Ground" width="32" height="32">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+WXAQ6CMAxFh14APQJwgMkRkAOg9z+MkOzHpilbB6sk2ORHndjXP0pB75x7zOrdMTHNes16F8rXVd/3YyUf05L1knyw17hSlOA3GTwL/p6w5j8Te2PJT7Gt+Zooydf04UCOWa7DX/iPnQew7zsZknd41fAt5y/4g1AH+Hv3v1vxuLC5/7Hw/AW7jfhcC+v+aw+cP0vwvuSfzzR/UiH16D/5Pyu/Drq5/Dku8a9BWrYnNeTWIfEvmewpvNI6tDVs5VM2FWqw5HM2eJQLbeFvZVN+H5SqIYcv+QMX5x//5XBPTz1XaPmcDX98P5BL+1xBf1NHRL1Rf7wHPVmL5YUXrxTNJ7Hx3SSsSfnghV8/GlEWrzE3xwe6xLjQABAAAA==
+  </data>
+ </layer>
+ <layer name="Decoration" width="32" height="32">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OMQ0AIAwAwRopUjCGeRgqgIkm5C75/SOAX42qQ55mlU0PAAA3VvcAPLIBQtCjCQAQAAA=
+  </data>
+ </layer>
+ <objectgroup name="Collision">
+  <object id="32" x="-2.66667" y="-1.33333" width="49.3333" height="518"/>
+  <object id="33" x="42" y="466.667" width="472" height="48"/>
+  <object id="34" x="159.333" y="448" width="240" height="29.3333"/>
+  <object id="35" x="175.333" y="430" width="224" height="32"/>
+  <object id="36" x="189.333" y="416.667" width="210" height="42.6667"/>
+  <object id="37" x="208" y="400.667" width="175.333" height="39.3333"/>
+  <object id="38" x="223.333" y="384" width="161.333" height="30.6667"/>
+  <object id="39" x="238.667" y="368" width="143.333" height="29.3333"/>
+  <object id="40" x="256.667" y="353.333" width="110" height="28.6667"/>
+  <object id="41" x="272.667" y="336" width="62.6667" height="21.3333"/>
+ </objectgroup>
+ <objectgroup name="Spawns"/>
+ <objectgroup name="Portals">
+  <properties>
+   <property name="targetX" value="28"/>
+   <property name="targetY" value="13"/>
+  </properties>
+  <object id="44" name="TOWN" x="80" y="417.333" width="15.3333" height="14.6667">
+   <properties>
+    <property name="targetX" value="55"/>
+    <property name="targetY" value="32"/>
+   </properties>
+  </object>
+  <object id="45" name="CASTLE" x="385.333" y="128.667" width="29.3333" height="14.6667">
+   <properties>
+    <property name="targetX" value="31"/>
+    <property name="targetY" value="4"/>
+   </properties>
+  </object>
+  <object id="46" name="START_LOC" x="86.6667" y="337.333" width="26.6667" height="28.6667"/>
+ </objectgroup>
+</map>

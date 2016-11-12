@@ -1,0 +1,56 @@
+[
+	{
+		type : ARMOR01
+		atlasID : armor01
+		classification : EQUIPPABLE
+		useType : ARMOR_CHEST
+		description : Top tier armor built from the scales of a dragon\nExtra long text to test the tooltip stuff hooray!
+		stackable : false
+		goldValue : 100
+	},
+	{
+		type : RING01
+		atlasID : ring01
+		classification : EQUIPPABLE
+		useType : RING
+		description : Magical ring
+		stackable : false
+		goldValue : 500
+	},
+	{
+		type : GEM01
+		atlasID : gem01
+		classification : CONSUMABLE
+		useType : NONE
+		description : Soulgem
+		stackable : true
+		goldValue : 5
+	},
+	{
+		type : SWORD01
+		atlasID : sword01
+		classification : EQUIPPABLE
+		useType : WEAPON_ONEHAND
+		description : Basic sword
+		stackable : false
+		goldValue : 75
+	},
+	{
+		type : SWORD02
+		atlasID : sword02
+		classification : EQUIPPABLE
+		useType : WEAPON_ONEHAND
+		description : Advanced sword
+		stackable : false
+		goldValue : 225
+	},
+	{
+		type : SHIELD01
+		atlasID : shield01
+		classification : EQUIPPABLE
+		useType : ARMOR_SHIELD
+		description : Basic shield
+		stackable : false
+		goldValue : 10
+	}
+]

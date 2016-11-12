@@ -1,0 +1,79 @@
+{
+	currentConversationID : 1
+	conversations: {
+		1 : {
+			text : I'm a famous mage! Talk to me small son *cough cough*
+			choices : [
+				{
+	                    destinationID: 2
+	                    text: What do you want old man?
+	            }
+            ]
+		}	
+		2 : {
+			text : What is your favorite element?
+			choices : [
+				{
+                        destinationID: 3
+                        text: Fire
+                }
+                {
+                        destinationID: 4
+                        text: Water
+                }
+				{
+                        destinationID: 5
+                        text: Earth
+                }
+				{
+                        destinationID: 6
+                        text: Darkness
+                }
+                {
+                		text : Show me your stuff
+                		conversationCommandEvent : LOAD_STORE_INVENTORY
+                }
+                {
+                        text: Enough of this nonsense!
+                        conversationCommandEvent : EXIT_CONVERSATION
+                }
+            ]
+		}	
+		3 : {
+			text : I can see the fire in your eyes.
+			choices : [
+				{
+                        destinationID: 2
+                        text: I also like other elements...
+	            }
+            ]
+		}
+		4 : {
+			text : I can feel that you are slippery.
+			choices : [
+				{
+                        destinationID: 2
+                        text: I also like other elements...
+	            }
+            ]
+		}	
+		5 : {
+			text : I can sense that you have strong skin.
+			choices : [
+				{
+                        destinationID: 2
+                        text: I also like other elements...
+	            }
+            ]
+		}	
+		6 : {
+			text : Do not trust the dark side!
+			choices : [
+				{
+                        destinationID: 2
+                        text: I also like other elements...
+	            }
+            ]
+		}	
+	}
+}

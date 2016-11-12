@@ -1,0 +1,55 @@
+
+tilesets.png
+size: 1024,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+002-Woods01
+  rotate: false
+  xy: 256, 1152
+  size: 256, 800
+  orig: 256, 800
+  offset: 0, 0
+  index: -1
+003-Forest01
+  rotate: false
+  xy: 512, 544
+  size: 256, 608
+  orig: 256, 608
+  offset: 0, 0
+  index: -1
+015-ForestTown01
+  rotate: false
+  xy: 0, 896
+  size: 256, 1056
+  orig: 256, 1056
+  offset: 0, 0
+  index: -1
+016-ForestTown02
+  rotate: false
+  xy: 256, 352
+  size: 256, 800
+  orig: 256, 800
+  offset: 0, 0
+  index: -1
+025-Castle01
+  rotate: false
+  xy: 0, 0
+  size: 256, 896
+  orig: 256, 896
+  offset: 0, 0
+  index: -1
+026-Castle02
+  rotate: false
+  xy: 512, 1152
+  size: 256, 800
+  orig: 256, 800
+  offset: 0, 0
+  index: -1
+027-Castle03
+  rotate: false
+  xy: 768, 1152
+  size: 256, 800
+  orig: 256, 800
+  offset: 0, 0
+  index: -1

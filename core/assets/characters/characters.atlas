@@ -1,0 +1,34 @@
+
+characters.png
+size: 1024,256
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+cleric
+  rotate: false
+  xy: 2, 2
+  size: 128, 192
+  orig: 128, 192
+  offset: 0, 0
+  index: -1
+fighter
+  rotate: false
+  xy: 132, 2
+  size: 128, 192
+  orig: 128, 192
+  offset: 0, 0
+  index: -1
+mage
+  rotate: false
+  xy: 262, 2
+  size: 128, 192
+  orig: 128, 192
+  offset: 0, 0
+  index: -1
+thief
+  rotate: false
+  xy: 392, 2
+  size: 128, 192
+  orig: 128, 192
+  offset: 0, 0
+  index: -1

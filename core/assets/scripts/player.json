@@ -1,0 +1,135 @@
+{
+	entityType : PLAYER
+	inventory : [
+		{
+			type : ARMOR01
+			numItems : 1
+		}
+		{
+			type : RING01
+			numItems : 2
+		}
+		{
+			type : GEM01
+			numItems : 3
+		}
+		{
+			type : SHIELD01
+			numItems : 1
+		}
+		{
+			type : SWORD01
+			numItems : 1
+		}
+		{
+			type : SWORD02
+			numItems : 44
+		}
+	]
+	state : IDLE
+	direction : DOWN
+	speed : 8
+	animationWidth : 32
+	animationHeight : 48
+	charAtlasID: fighter
+	animationConfig: [
+		{
+			animationType: IDLE
+			frameDuration: 0
+			gridPoints: [
+				{
+					x: 0
+					y: 0
+				}
+			]
+		}
+		{
+			animationType: WALK_DOWN
+			frameDuration: 0.2
+			gridPoints: [
+				{
+					x: 0
+					y: 0
+				}
+				{
+					x: 1
+					y: 0
+				}
+				{
+				    x: 2
+					y: 0
+				}
+				{
+				    x: 3
+					y: 0
+				}
+			]
+		}
+		{
+			animationType: WALK_LEFT
+		    frameDuration: 0.2
+			gridPoints: [
+				{
+					x: 0
+					y: 1
+				}
+				{
+					x: 1
+					y: 1
+				}
+				{
+				    x: 2
+					y: 1
+				}
+				{
+				    x: 3
+					y: 1
+				}
+			]
+		}
+		{
+			animationType: WALK_RIGHT
+		    frameDuration: 0.2
+			gridPoints: [
+				{
+					x: 0
+					y: 2
+				}	
+				{
+					x: 1
+					y: 2
+				}
+				{
+				    x: 2
+					y: 2
+				}
+				{
+				    x: 3
+					y: 2
+				}
+			]
+		}
+		{
+			animationType: WALK_UP
+		    frameDuration: 0.2
+			gridPoints: [
+				{
+					x: 0
+					y: 3
+				}		
+				{
+					x: 1
+					y: 3
+				}
+				{
+				    x: 2
+					y: 3
+				}
+				{
+				    x: 3
+					y: 3
+				}
+			]
+		}	
+	]
+}	

@@ -1,0 +1,209 @@
+
+items.png
+size: 512,64
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+amulet01
+  rotate: false
+  xy: 352, 38
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+armor01
+  rotate: false
+  xy: 352, 20
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+armor02
+  rotate: false
+  xy: 370, 38
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+armor03
+  rotate: false
+  xy: 370, 20
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+armor04
+  rotate: false
+  xy: 388, 38
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+boots01
+  rotate: false
+  xy: 388, 20
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+boots02
+  rotate: false
+  xy: 406, 38
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+boots03
+  rotate: false
+  xy: 406, 20
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+boots04
+  rotate: false
+  xy: 424, 38
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+gem01
+  rotate: false
+  xy: 424, 20
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+helmet01
+  rotate: false
+  xy: 442, 38
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+helmet02
+  rotate: false
+  xy: 442, 20
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+helmet03
+  rotate: false
+  xy: 460, 38
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+helmet04
+  rotate: false
+  xy: 460, 20
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+inventory-slot-amulet
+  rotate: false
+  xy: 2, 6
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+inventory-slot-armor
+  rotate: false
+  xy: 52, 6
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+inventory-slot-boots
+  rotate: false
+  xy: 102, 6
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+inventory-slot-helmet
+  rotate: false
+  xy: 152, 6
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+inventory-slot-ring
+  rotate: false
+  xy: 202, 6
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+inventory-slot-shield
+  rotate: false
+  xy: 252, 6
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+inventory-slot-weapon
+  rotate: false
+  xy: 302, 6
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+ring01
+  rotate: false
+  xy: 478, 38
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+ring02
+  rotate: false
+  xy: 478, 20
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+shield01
+  rotate: false
+  xy: 352, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+sword01
+  rotate: false
+  xy: 370, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+sword02
+  rotate: false
+  xy: 388, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+sword03
+  rotate: false
+  xy: 406, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+sword04
+  rotate: false
+  xy: 424, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+sword05
+  rotate: false
+  xy: 442, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
