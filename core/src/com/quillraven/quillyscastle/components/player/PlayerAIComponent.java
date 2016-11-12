@@ -7,7 +7,7 @@ import com.quillraven.quillyscastle.entity.Entity;
 import com.quillraven.quillyscastle.map.Map;
 
 public class PlayerAIComponent extends AIComponent {
-	@Override
-	public void update(Entity entity, GameWorld world, Map map, Camera camera, float deltaTime) {
-	}
+    @Override
+    public void update(Entity entity, GameWorld world, Map map, Camera camera, float deltaTime) {
+    }
 }

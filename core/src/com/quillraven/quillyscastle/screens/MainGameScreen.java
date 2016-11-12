@@ -12,78 +12,78 @@ import com.quillraven.quillyscastle.map.MapManager.MapType;
 import com.quillraven.quillyscastle.profile.ProfileManager;
 
 public class MainGameScreen implements Screen {
-	private final GameWorld			world;
-	private final GameRenderer		renderer;
-	private final PlayerHUD			playerHud;
-	private final InputMultiplexer	inputMultiplexer;
-	private float					accumulator;
-	private final float				fixedTimeStep;
-	private float					interpolationValue;
+    private final GameWorld	   world;
+    private final GameRenderer	   renderer;
+    private final PlayerHUD	   playerHud;
+    private final InputMultiplexer inputMultiplexer;
+    private float		   accumulator;
+    private final float		   fixedTimeStep;
+    private float		   interpolationValue;
 
-	public MainGameScreen() {
-		accumulator = 0;
-		fixedTimeStep = 1.0f / Gdx.graphics.getDisplayMode().refreshRate;
+    public MainGameScreen() {
+	accumulator = 0;
+	fixedTimeStep = 1.0f / Gdx.graphics.getDisplayMode().refreshRate;
 
-		world = new GameWorld();
-		renderer = new GameRenderer(world);
-		playerHud = new PlayerHUD(world.getPlayer());
+	world = new GameWorld();
+	renderer = new GameRenderer(world);
+	playerHud = new PlayerHUD(world.getPlayer());
 
-		inputMultiplexer = new InputMultiplexer();
-		inputMultiplexer.addProcessor(playerHud.getStage());
-		inputMultiplexer.addProcessor(world.getPlayer().getComponent(PlayerInputComponent.class));
+	inputMultiplexer = new InputMultiplexer();
+	inputMultiplexer.addProcessor(playerHud.getStage());
+	inputMultiplexer.addProcessor(world.getPlayer().getComponent(PlayerInputComponent.class));
 
-		MapManager.getInstance().setMap(MapType.TOWN);
+	MapManager.getInstance().setMap(MapType.TOWN);
+    }
+
+    @Override
+    public void show() {
+	Gdx.input.setInputProcessor(inputMultiplexer);
+    }
+
+    @Override
+    public void hide() {
+	ProfileManager.getInstance().saveCurrentProfile(true);
+	Gdx.input.setInputProcessor(null);
+    }
+
+    @Override
+    public void render(float deltaTime) {
+	if (deltaTime > 0.25f) {
+	    deltaTime = 0.25f;
 	}
 
-	@Override
-	public void show() {
-		Gdx.input.setInputProcessor(inputMultiplexer);
+	accumulator += deltaTime;
+
+	while (accumulator >= fixedTimeStep) {
+	    world.update(fixedTimeStep);
+	    accumulator -= fixedTimeStep;
 	}
+	playerHud.update(deltaTime);
 
-	@Override
-	public void hide() {
-		ProfileManager.getInstance().saveCurrentProfile(true);
-		Gdx.input.setInputProcessor(null);
-	}
+	interpolationValue = accumulator / fixedTimeStep;
+	renderer.render(interpolationValue);
+	playerHud.render();
+    }
 
-	@Override
-	public void render(float deltaTime) {
-		if (deltaTime > 0.25f) {
-			deltaTime = 0.25f;
-		}
+    @Override
+    public void resize(int width, int height) {
+	renderer.resize(width, height);
+	playerHud.resize(width, height);
+    }
 
-		accumulator += deltaTime;
+    @Override
+    public void pause() {
+	ProfileManager.getInstance().saveCurrentProfile(true);
+    }
 
-		while (accumulator >= fixedTimeStep) {
-			world.update(fixedTimeStep);
-			accumulator -= fixedTimeStep;
-		}
-		playerHud.update(deltaTime);
+    @Override
+    public void resume() {
+    }
 
-		interpolationValue = accumulator / fixedTimeStep;
-		renderer.render(interpolationValue);
-		playerHud.render();
-	}
-
-	@Override
-	public void resize(int width, int height) {
-		renderer.resize(width, height);
-		playerHud.resize(width, height);
-	}
-
-	@Override
-	public void pause() {
-		ProfileManager.getInstance().saveCurrentProfile(true);
-	}
-
-	@Override
-	public void resume() {
-	}
-
-	@Override
-	public void dispose() {
-		world.dispose();
-		renderer.dispose();
-		playerHud.dispose();
-	}
+    @Override
+    public void dispose() {
+	world.dispose();
+	renderer.dispose();
+	playerHud.dispose();
+    }
 }

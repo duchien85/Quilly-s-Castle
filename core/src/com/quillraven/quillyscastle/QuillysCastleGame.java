@@ -9,50 +9,50 @@ import com.quillraven.quillyscastle.screens.NewGameScreen;
 import com.quillraven.quillyscastle.utils.Utils;
 
 public class QuillysCastleGame extends Game {
-	public enum ScreenType {
-		MAIN_MENU,
-		NEW_GAME,
-		LOAD_GAME,
-		GAME;
+    public enum ScreenType {
+	MAIN_MENU,
+	NEW_GAME,
+	LOAD_GAME,
+	GAME;
+    }
+
+    private MainMenuScreen mainMenuScreen;
+    private NewGameScreen  newGameScreen;
+    private LoadGameScreen loadGameScreen;
+    private MainGameScreen mainGameScreen;
+
+    @Override
+    public void create() {
+	mainMenuScreen = new MainMenuScreen();
+	mainGameScreen = new MainGameScreen();
+	newGameScreen = new NewGameScreen();
+	loadGameScreen = new LoadGameScreen();
+
+	// setScreen(mainMenuScreen);
+	setScreen(mainGameScreen);
+    }
+
+    public Screen getScreen(ScreenType type) {
+	switch (type) {
+	    case MAIN_MENU:
+		return mainMenuScreen;
+	    case NEW_GAME:
+		return newGameScreen;
+	    case GAME:
+		return mainGameScreen;
+	    case LOAD_GAME:
+		return loadGameScreen;
 	}
 
-	private MainMenuScreen	mainMenuScreen;
-	private NewGameScreen	newGameScreen;
-	private LoadGameScreen	loadGameScreen;
-	private MainGameScreen	mainGameScreen;
+	return null;
+    }
 
-	@Override
-	public void create() {
-		mainMenuScreen = new MainMenuScreen();
-		mainGameScreen = new MainGameScreen();
-		newGameScreen = new NewGameScreen();
-		loadGameScreen = new LoadGameScreen();
-
-//		 setScreen(mainMenuScreen);
-		setScreen(mainGameScreen);
-	}
-
-	public Screen getScreen(ScreenType type) {
-		switch (type) {
-			case MAIN_MENU:
-				return mainMenuScreen;
-			case NEW_GAME:
-				return newGameScreen;
-			case GAME:
-				return mainGameScreen;
-			case LOAD_GAME:
-				return loadGameScreen;
-		}
-
-		return null;
-	}
-
-	@Override
-	public void dispose() {
-		mainMenuScreen.dispose();
-		newGameScreen.dispose();
-		loadGameScreen.dispose();
-		mainGameScreen.dispose();
-		Utils.dispose();
-	}
+    @Override
+    public void dispose() {
+	mainMenuScreen.dispose();
+	newGameScreen.dispose();
+	loadGameScreen.dispose();
+	mainGameScreen.dispose();
+	Utils.dispose();
+    }
 }

@@ -13,135 +13,135 @@ import com.quillraven.quillyscastle.entity.Entity.State;
 import com.quillraven.quillyscastle.map.Map;
 
 public abstract class PhysicsComponent extends ComponentSubject implements Component {
-	private static final String	TAG	= PhysicsComponent.class.getSimpleName();
+    private static final String	TAG = PhysicsComponent.class.getSimpleName();
 
-	protected State				state;
-	protected Rectangle			collisionBox;
-	protected Rectangle			boundingBox;
-	protected Vector2			size;
-	protected float				speed;
-	protected Vector2			velocity;
-	protected Direction			direction;
+    protected State		state;
+    protected Rectangle		collisionBox;
+    protected Rectangle		boundingBox;
+    protected Vector2		size;
+    protected float		speed;
+    protected Vector2		velocity;
+    protected Direction		direction;
 
-	public PhysicsComponent() {
-		size = new Vector2(1, 1);
-		velocity = new Vector2(0, 0);
-		boundingBox = new Rectangle(0, 0, 1, 1);
-		collisionBox = new Rectangle(0, 0, 1, 0.2f);
-		speed = 0f;
+    public PhysicsComponent() {
+	size = new Vector2(1, 1);
+	velocity = new Vector2(0, 0);
+	boundingBox = new Rectangle(0, 0, 1, 1);
+	collisionBox = new Rectangle(0, 0, 1, 0.2f);
+	speed = 0f;
+    }
+
+    @Override
+    public void dispose() {
+	Gdx.app.debug(TAG, "disposed!");
+    }
+
+    @Override
+    public void receiveMessage(MessageType type, Object... args) {
+	switch (type) {
+	    case SET_SPEED:
+		this.speed = (Float) args[0];
+		updateVelocity();
+		break;
+	    case SET_SIZE:
+		this.size.set((Float) args[0], (Float) args[1]);
+		this.collisionBox.setSize(size.x, size.y * 0.2f);
+		this.boundingBox.setSize(size.x, size.y);
+		break;
+	    case SET_DIRECTION:
+		this.direction = (Direction) args[0];
+		updateVelocity();
+		break;
+	    case SET_LOCATION:
+		final Float x = (Float) args[0];
+		final Float y = (Float) args[1];
+		this.collisionBox.setPosition(x, y);
+		this.boundingBox.setPosition(x, y);
+		break;
+	    case SET_STATE:
+		this.state = (State) args[0];
+		updateVelocity();
+		break;
+	    default:
+		break;
+	}
+    }
+
+    protected void updateVelocity() {
+	if (state == null || direction == null) {
+	    // not yet initialized
+	    return;
 	}
 
-	@Override
-	public void dispose() {
-		Gdx.app.debug(TAG, "disposed!");
-	}
-
-	@Override
-	public void receiveMessage(MessageType type, Object... args) {
-		switch (type) {
-			case SET_SPEED:
-				this.speed = (Float) args[0];
-				updateVelocity();
-				break;
-			case SET_SIZE:
-				this.size.set((Float) args[0], (Float) args[1]);
-				this.collisionBox.setSize(size.x, size.y * 0.2f);
-				this.boundingBox.setSize(size.x, size.y);
-				break;
-			case SET_DIRECTION:
-				this.direction = (Direction) args[0];
-				updateVelocity();
-				break;
-			case SET_LOCATION:
-				final Float x = (Float) args[0];
-				final Float y = (Float) args[1];
-				this.collisionBox.setPosition(x, y);
-				this.boundingBox.setPosition(x, y);
-				break;
-			case SET_STATE:
-				this.state = (State) args[0];
-				updateVelocity();
-				break;
-			default:
-				break;
+	switch (state) {
+	    case IDLE:
+	    case IMMOBILE:
+		this.velocity.set(0, 0);
+		break;
+	    case WALKING:
+		switch (direction) {
+		    case UP:
+			this.velocity.set(0, speed);
+			break;
+		    case DOWN:
+			this.velocity.set(0, -speed);
+			break;
+		    case LEFT:
+			this.velocity.set(-speed, 0);
+			break;
+		    case RIGHT:
+			this.velocity.set(speed, 0);
+			break;
 		}
+		break;
+	}
+    }
+
+    protected boolean isLocationPathable(Map map, Rectangle collisionBox) {
+	if (!map.getBoundingBox().contains(collisionBox)) {
+	    return false;
 	}
 
-	protected void updateVelocity() {
-		if (state == null || direction == null) {
-			// not yet initialized
-			return;
+	for (MapObject object : map.getCollisionLayer().getObjects()) {
+	    if (object instanceof RectangleMapObject) {
+		if (collisionBox.overlaps(((RectangleMapObject) object).getRectangle())) {
+		    return false;
 		}
-
-		switch (state) {
-			case IDLE:
-			case IMMOBILE:
-				this.velocity.set(0, 0);
-				break;
-			case WALKING:
-				switch (direction) {
-					case UP:
-						this.velocity.set(0, speed);
-						break;
-					case DOWN:
-						this.velocity.set(0, -speed);
-						break;
-					case LEFT:
-						this.velocity.set(-speed, 0);
-						break;
-					case RIGHT:
-						this.velocity.set(speed, 0);
-						break;
-				}
-				break;
-		}
+	    }
 	}
 
-	protected boolean isLocationPathable(Map map, Rectangle collisionBox) {
-		if (!map.getBoundingBox().contains(collisionBox)) {
-			return false;
-		}
+	return true;
+    }
 
-		for (MapObject object : map.getCollisionLayer().getObjects()) {
-			if (object instanceof RectangleMapObject) {
-				if (collisionBox.overlaps(((RectangleMapObject) object).getRectangle())) {
-					return false;
-				}
-			}
-		}
+    protected Entity getCollidingEntity(Entity entity, GameWorld world, Map map, Rectangle collisionBox) {
+	final Array<Entity> entities = map.getEntities();
+	for (int i = entities.size - 1; i >= 0; --i) {
+	    if (entity == entities.get(i)) {
+		continue;
+	    }
 
-		return true;
+	    if (collisionBox.overlaps(entities.get(i).getCollisionBox())) {
+		return entities.get(i);
+	    }
 	}
 
-	protected Entity getCollidingEntity(Entity entity, GameWorld world, Map map, Rectangle collisionBox) {
-		final Array<Entity> entities = map.getEntities();
-		for (int i = entities.size - 1; i >= 0; --i) {
-			if (entity == entities.get(i)) {
-				continue;
-			}
-
-			if (collisionBox.overlaps(entities.get(i).getCollisionBox())) {
-				return entities.get(i);
-			}
-		}
-
-		final Entity player = world.getPlayer();
-		if (entity != player && collisionBox.overlaps(player.getCollisionBox())) {
-			return player;
-		}
-
-		return null;
+	final Entity player = world.getPlayer();
+	if (entity != player && collisionBox.overlaps(player.getCollisionBox())) {
+	    return player;
 	}
 
-	public Rectangle getCollisionBox() {
-		return collisionBox;
-	}
+	return null;
+    }
 
-	public Rectangle getBoundingBox() {
-		return boundingBox;
-	}
+    public Rectangle getCollisionBox() {
+	return collisionBox;
+    }
 
-	public Vector2 getSize() {
-		return size;
-	}
+    public Rectangle getBoundingBox() {
+	return boundingBox;
+    }
+
+    public Vector2 getSize() {
+	return size;
+    }
 }
