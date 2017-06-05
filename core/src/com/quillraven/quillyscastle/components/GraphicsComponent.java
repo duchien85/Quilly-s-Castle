@@ -22,22 +22,22 @@ import com.quillraven.quillyscastle.map.Map;
 import com.quillraven.quillyscastle.utils.Utils;
 
 public abstract class GraphicsComponent extends ComponentSubject implements Component {
-    private static final String				 TAG = GraphicsComponent.class.getSimpleName();
+    private static final String						TAG = GraphicsComponent.class.getSimpleName();
 
-    protected ObjectMap<Entity.AnimationType, Animation> animations;
+    protected ObjectMap<Entity.AnimationType, Animation<TextureRegion>>	animations;
 
-    protected State					 state;
-    protected Direction					 direction;
+    protected State							state;
+    protected Direction							direction;
 
-    protected boolean					 updateAnimation;
-    protected float					 frameTime;
-    protected Animation					 currentAnimation;
-    protected Vector2					 previousPosition;
-    protected Vector2					 origin;
-    protected float					 red, green, blue, alpha;
+    protected boolean							updateAnimation;
+    protected float							frameTime;
+    protected Animation<TextureRegion>					currentAnimation;
+    protected Vector2							previousPosition;
+    protected Vector2							origin;
+    protected float							red, green, blue, alpha;
 
     public GraphicsComponent() {
-	animations = new ObjectMap<Entity.AnimationType, Animation>();
+	animations = new ObjectMap<Entity.AnimationType, Animation<TextureRegion>>();
 
 	updateAnimation = false;
 	frameTime = 0;
@@ -165,7 +165,7 @@ public abstract class GraphicsComponent extends ComponentSubject implements Comp
 	// shapeRenderer.end();
     }
 
-    private Animation loadAnimation(String charAtlasID, Array<GridPoint2> points, int tileWidth, int tileHeight, float frameDuration) {
+    private Animation<TextureRegion> loadAnimation(String charAtlasID, Array<GridPoint2> points, int tileWidth, int tileHeight, float frameDuration) {
 	AtlasRegion charTextureRegion = Utils.CHARACTERS_TEXTURE_ATLAS.findRegion(charAtlasID);
 
 	TextureRegion[][] frames = charTextureRegion.split(tileWidth, tileHeight);
@@ -174,6 +174,6 @@ public abstract class GraphicsComponent extends ComponentSubject implements Comp
 	    animationFrames.add(frames[point.y][point.x]);
 	}
 
-	return new Animation(frameDuration, animationFrames, Animation.PlayMode.LOOP);
+	return new Animation<TextureRegion>(frameDuration, animationFrames, Animation.PlayMode.LOOP);
     }
 }

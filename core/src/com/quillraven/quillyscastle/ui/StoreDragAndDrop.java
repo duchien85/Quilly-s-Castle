@@ -50,7 +50,7 @@ public class StoreDragAndDrop extends InventorySlotUISubject {
 			    invalidImage.setScaling(Scaling.fit);
 			    invalidImage.setColor(255, 0, 0, 255);
 
-			    dragAndDrop.setDragActorPosition(-slot.getWidth() * 0.5f, slot.getHeight() * 0.5f);
+			    dragAndDrop.setDragActorPosition(slot.getWidth() * 0.5f, -slot.getHeight() * 0.5f);
 			} else {
 			    dragImage.setDrawable(slot.getItemGraphic().getDrawable());
 			    invalidImage.setDrawable(slot.getItemGraphic().getDrawable());

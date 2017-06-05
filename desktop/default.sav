@@ -1,0 +1,285 @@
+{
+equipment: []
+playerX: {
+	class: java.lang.Float
+	value: 15.772913
+}
+playerY: {
+	class: java.lang.Float
+	value: 12.674997
+}
+inventory: [
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 0
+		type: ARMOR01
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 1
+		type: RING01
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 8
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 9
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 10
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 11
+		type: GEM01
+		numItems: 4
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 12
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 13
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 14
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 15
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 16
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 17
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 18
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 19
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 20
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 21
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 22
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 23
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 24
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 25
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 26
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 27
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 28
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 29
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 30
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 31
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 32
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 33
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 34
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 35
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 36
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 37
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 38
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 39
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 40
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 41
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 42
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 43
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 44
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 45
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 46
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 47
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 48
+		type: SWORD02
+		numItems: 1
+	}
+	{
+		class: com.quillraven.quillyscastle.inventory.ItemLocation
+		locationIndex: 49
+		type: SWORD02
+		numItems: 1
+	}
+]
+gold: {
+	class: java.lang.Integer
+	value: 814
+}
+currentMap: {
+	class: java.lang.String
+	value: TOWN
+}
+}
